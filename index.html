@@ -26,24 +26,10 @@
       <ol>
         <li class="mb">
           <p>Drag this bookmarklet to your bookmarks bar in desktop Safari</p>
-          <a href="javascript:(function(){
-            var h,a,f;
-            a=document.getElementsByTagName('link');
-            for(h=0;h&lt;a.length;h++){f=a[h];
-              if(f.rel.toLowerCase().match(/stylesheet/)&amp;&amp;f.href){
-                var g=f.href.replace(/(&amp;|%5C?)forceReload=\d+/,'');
-                f.href=g+(g.match(/\?/)?'&amp;':'?')+'forceReload='+(new Date().valueOf())
-              }
-            }
+          <a href="javascript:(function(){var h,a,f;a=document.getElementsByTagName('link');for(h=0;h&lt;a.length;h++){f=a[h];if(f.rel.toLowerCase().match(/stylesheet/)&amp;&amp;f.href){var g=f.href.replace(/(&amp;|%5C?)forceReload=\d+/,'');f.href=g+(g.match(/\?/)?'&amp;':'?')+'forceReload='+(new Date().valueOf())}}
             var style=document.createElement('style'),
             styleContent=document.createTextNode('
-              *{
-              font-family:Georgia,serif!important;
-              color:#333!important;
-              background:#fff!important;
-              font-size:24px!important;
-              line-height:40px!important;
-              }
+              *{font-family:Georgia,serif!important;color:#333!important;background:#fff!important;font-size:24px!important;line-height:40px!important;}
               body{max-width:768px!important;margin:0 auto!important;padding:32px!important;}
             ');
             style.appendChild(styleContent);
@@ -51,7 +37,7 @@
            
             var callback = document.createElement('script');
             callback.innerHTML = 'function readThis(data){
-              var newHtml = '<h1>' + data.title + '</h1>' + data.content;
+              var newHtml = data.content;
               document.body.innerHTML = newHtml;
             };';
             document.body.appendChild(callback);
