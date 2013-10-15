@@ -1,0 +1,40 @@
+body {
+  font-family: Georgia, serif;
+  font-size: 125%;
+  color: #333;
+}
+a {
+  color: #666;
+  text-decoration: none;
+  &:hover {
+    color: #66c;
+    text-decoration: underline;
+  }
+}
+h1, h2, h3, h4, h5, h6  { margin-bottom: 0; }
+.regular { font-weight: normal; }
+.massive { font-size: 4em; }
+.wrap {
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2rem;
+}
+.button {
+  display: inline-block;
+  line-height: 3rem;
+  padding: 0 1rem;
+  border-radius: .25rem;
+}
+.button-gray {
+  color: #555;
+  background-color: #eee;
+  &:hover {
+    color: #555;
+    background-color: #ddd;
+  }
+}
+
+.mb {
+  margin-bottom: 2rem;
+}

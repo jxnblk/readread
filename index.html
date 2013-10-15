@@ -1,0 +1,84 @@
+<!doctype html> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <title>Readread</title>
+  <meta name="author" content="Jxnblk">
+  <meta name="description" content="Simple Readability bookmarklets for iOS7">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.png" />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="wrap">
+  <header class="mb">
+    <h1 class="massive regular">Readread</h1>
+    <p>Readability bookmarklets for iOS7</p>
+  </header>
+  <main>
+    <section class="mb">
+      <h2>Mobile Safari's Reader on iOS7 is terrible</h2>
+      <p>Here are some bookmarklets to fix that.</p>
+    </section>
+    <section class="mb">
+      <h2>Readread for iPad Mini</h2>
+      <h3>Instructions:</h3>
+      <ol>
+        <li class="mb">
+          <p>Drag this bookmarklet to your bookmarks bar in desktop Safari</p>
+          <a href="javascript:(function(){
+            var h,a,f;
+            a=document.getElementsByTagName('link');
+            for(h=0;h&lt;a.length;h++){f=a[h];
+              if(f.rel.toLowerCase().match(/stylesheet/)&amp;&amp;f.href){
+                var g=f.href.replace(/(&amp;|%5C?)forceReload=\d+/,'');
+                f.href=g+(g.match(/\?/)?'&amp;':'?')+'forceReload='+(new Date().valueOf())
+              }
+            }
+            var style=document.createElement('style'),
+            styleContent=document.createTextNode('
+              *{
+              font-family:Georgia,serif!important;
+              color:#333!important;
+              background:#fff!important;
+              font-size:24px!important;
+              line-height:40px!important;
+              }
+              body{max-width:768px!important;margin:0 auto!important;padding:32px!important;}
+            ');
+            style.appendChild(styleContent);
+            document.getElementsByTagName('head')[0].appendChild(style);
+           
+            var callback = document.createElement('script');
+            callback.innerHTML = 'function readThis(data){
+              var newHtml = data.content;
+              document.body.innerHTML = newHtml;
+            };';
+            document.body.appendChild(callback);
+  
+            var ajax = document.createElement('script');
+            var url = 'http://www.readability.com/api/content/v1/parser?url=' + window.location.href + '&token=73327f0bb61592fd2f86adb3ca7dcf2b2ae3501f&callback=readThis';
+            ajax.src = url;
+            document.body.appendChild(ajax);
+            })();" 
+            class="button button-gray">
+              Readread iPad
+          </a>
+        </li>
+        <li class="mb">Open this bookmarklet on any article in Mobile Safari</li>
+        <li class="mb">Read</li>
+      </ol>
+    </section>
+    <section class="mb">
+      <h2>Coming Soon</h2>
+      <p>Font style and size customization options</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built with the <a href="http://www.readability.com/developers/api">Readability API</a></p>
+    <p>Made with love by <a href="http://jxnblk.com">Jxnblk</a>.</p>
+  </footer>
+  
+</body>
+</html>  
