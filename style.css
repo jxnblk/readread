@@ -1,5 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
 body {
-  font-family: Georgia, serif;
+  font-family: Merriweather, Georgia, serif;
   font-size: 125%;
   color: #333;
 }
@@ -18,7 +19,8 @@ h1, h2, h3, h4, h5, h6  { margin-bottom: 0; }
   max-width: 768px;
   margin-right: auto;
   margin-left: auto;
-  padding: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 .button {
   display: inline-block;
@@ -35,6 +37,6 @@ h1, h2, h3, h4, h5, h6  { margin-bottom: 0; }
   }
 }
 
-.mb {
-  margin-bottom: 2rem;
-}
+.mr { margin-right: 1rem; }
+.mb { margin-bottom: 2rem; }
+.px { padding-top: 2rem; padding-bottom: 2rem; }
