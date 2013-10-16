@@ -22,6 +22,7 @@
     </section>
     <section class="mb">
       <h2>Readread for iPad Mini</h2>
+      <p><small>24px Georgia</small></p>
       <h3>Instructions:</h3>
       <ol>
         <li class="mb">
@@ -32,7 +33,7 @@ document.documentElement.innerHTML=%22%3Chead%3E%3C/head%3E%3Cbody%3EParsing...%
 var callback=document.createElement('script');
 callback.innerHTML='function%20readThis(data){var%20newHtml=%22%3Ch1%3E%22+data.title+%22%3C/h1%3E%22+data.content;
 
-var style=document.createElement(%22style%22),styleContent=document.createTextNode(%22body{font-family:Georgia,serif!important;color:#333!important;background:#fff!important;font-size:24px!important;line-height:1.5!important;width:auto!important;min-width:none!important;max-width:none!important;}body{max-width:768px!important;margin:0 auto!important;padding:32px!important;}h1{font-size:32px!important;margin-bottom:1em!important;font-weight:bold!important;}%22);
+var style=document.createElement(%22style%22),styleContent=document.createTextNode(%22body{font-family:Georgia,serif;color:#333;background:#fff;font-size:1.5em;line-height:1.5;max-width:768px;margin:0 auto;padding:32px;}a{color:#08a;text-decoration:none;}%22);
 style.appendChild(styleContent);
 document.getElementsByTagName(%22head%22)[0].appendChild(style);
 document.body.innerHTML=newHtml;
