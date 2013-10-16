@@ -8,10 +8,10 @@ body {
 a {
   color: #666;
   text-decoration: none;
-  &:hover {
-    color: #66c;
-    text-decoration: underline;
-  }
+}
+a:hover {
+  color: #66c;
+  text-decoration: underline;
 }
 h1, h2, h3, h4, h5, h6  { margin-bottom: 0; }
 .regular { font-weight: normal; }
@@ -32,10 +32,10 @@ h1, h2, h3, h4, h5, h6  { margin-bottom: 0; }
 .button-gray {
   color: #555;
   background-color: #eee;
-  &:hover {
-    color: #555;
-    background-color: #ddd;
-  }
+}
+.button-gray:hover {
+  color: #555;
+  background-color: #ddd;
 }
 
 .mr { margin-right: 1rem; }
