@@ -1,6 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather);
 body {
-  font-family: Merriweather, Georgia, serif;
+  font-family: Georgia, serif;
   font-size: 125%;
   line-height: 1.5;
   color: #333;
@@ -40,4 +39,4 @@ h1, h2, h3, h4, h5, h6  { margin-bottom: 0; }
 
 .mr { margin-right: 1rem; }
 .mb { margin-bottom: 2rem; }
-.px { padding-top: 2rem; padding-bottom: 2rem; }
+.py { padding-top: 1rem; padding-bottom: 1rem; }
